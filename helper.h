@@ -123,9 +123,7 @@ void matrix_multiply(
 		return;
 
 	if (a_r1 - a_r2 == 0) {
-		for (int i = a_c1; i <= a_c2; ++i) {
-			C[a_r1][b_c1] += A[a_r1][i] * B[i][b_c1];
-		}
+		C[a_r1][b_c1] += A[a_r1][a_c1] * B[b_r1][b_c1];
 		return;
 	}
 
